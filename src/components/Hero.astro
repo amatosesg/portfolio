@@ -1,0 +1,39 @@
+---
+import { translations } from "../i18n";
+import type { Locale } from "../i18n";
+
+import { ArrowDown } from "@lucide/astro";
+
+const currentLocale = (Astro.currentLocale ?? "es") as Locale;
+const t = translations[currentLocale];
+---
+
+<section id="hero" class="flex min-h-[calc(100vh-5rem)] items-center justify-center px-6 py-20">
+  <div class="mx-auto flex max-w-3xl flex-col items-center text-center">
+
+    <div class="mb-8 flex h-44 w-44 items-center justify-center overflow-hidden rounded-full border border-gray-300 bg-gray-100 text-sm text-gray-500 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400">
+      Photo
+    </div>
+
+    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-gray-300/70 bg-gray-100/70 px-3 py-1.5 text-sm text-gray-600 backdrop-blur-sm dark:border-slate-700/70 dark:bg-slate-800/70 dark:text-slate-300">
+      <span class="h-2 w-2 rounded-full bg-green-500"></span>
+      <span>{t.hero.available}</span>
+    </div>
+
+    <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
+      {t.hero.title}
+    </h1>
+
+    <p class="mt-6 max-w-2xl text-base leading-7 text-gray-600 sm:text-lg dark:text-slate-300">
+      {t.hero.description}
+    </p>
+
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+      <a href="#projects"
+        class="inline-flex items-center gap-2 rounded-full bg-gray-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-gray-700 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200">
+        {t.hero.projects}
+        <ArrowDown size={16} stroke-width={1.8} aria-hidden="true" />
+      </a>
+    </div>
+  </div>
+</section>

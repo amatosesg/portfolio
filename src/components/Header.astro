@@ -1,0 +1,115 @@
+---
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+import ThemeSwitcher from "./ThemeSwitcher.astro";
+import { translations } from "../i18n";
+import type { Locale } from "../i18n";
+
+import { Menu, X } from "@lucide/astro";
+
+const currentLocale = (Astro.currentLocale ?? "es") as Locale;
+const t = translations[currentLocale];
+---
+
+<header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+  <div class="flex justify-center px-4 py-4">
+    <div class="flex items-center gap-1 rounded-full border border-gray-300/70 bg-gray-100/90 px-2 py-1.5 text-gray-800 shadow-sm backdrop-blur-md dark:border-slate-700/70 dark:bg-slate-800/85 dark:text-slate-100">
+      <nav aria-label={t.accessibility.mainNavigation} class="hidden md:block">
+        <ul class="flex items-center gap-1">
+          <li>
+            <a href="#projects"
+              data-nav-section="projects"
+              class="rounded-full px-4 py-2 text-sm text-gray-600 transition-colors hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400">
+              {t.nav.work}
+            </a>
+          </li>
+
+          <li>
+            <a href="#about"
+              data-nav-section="about"
+              class="rounded-full px-4 py-2 text-sm text-gray-600 transition-colors hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400">
+              {t.nav.about}
+            </a>
+          </li>
+
+          <li>
+            <a href="#experience"
+              data-nav-section="experience"
+              class="rounded-full px-4 py-2 text-sm text-gray-600 transition-colors hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400">
+              {t.nav.experience}
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact"
+              data-nav-section="contact"
+              class="rounded-full px-4 py-2 text-sm text-gray-600 transition-colors hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400">
+              {t.nav.contact}
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="hidden h-6 w-px bg-gray-400/70 md:block dark:bg-slate-600/70"></div>
+
+      <div class="hidden items-center gap-0.5 md:flex">
+        <LanguageSwitcher />
+        <ThemeSwitcher />
+      </div>
+
+      <div class="flex items-center gap-1.5 md:hidden">
+        <div class="flex items-center gap-0.5">
+          <LanguageSwitcher />
+          <ThemeSwitcher />
+        </div>
+
+        <div class="mx-2 h-6 w-px bg-gray-400/70 dark:bg-slate-600/70"></div>
+
+        <button id="mobile-menu-button" type="button" aria-label={t.accessibility.openMenu} aria-expanded="false"
+          class="flex h-10 w-10 items-center justify-center rounded-full text-gray-700 transition-colors hover:bg-gray-200 dark:text-slate-200 dark:hover:bg-slate-900">
+          <Menu id="mobile-menu-open-icon" size={24} stroke-width={1.8} aria-hidden="true" />
+          <X id="mobile-menu-close-icon" size={24} stroke-width={1.8} aria-hidden="true" class="hidden" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <nav id="mobile-menu" aria-label={t.accessibility.mobileNavigation}
+    class="mx-auto -mt-2 hidden w-[calc(100%-2rem)] max-w-xs rounded-2xl border border-gray-300/70 bg-gray-100/95 p-2 text-gray-800 shadow-md backdrop-blur-md dark:border-slate-700/70 dark:bg-slate-800/95 dark:text-slate-100">
+    <ul class="flex flex-col gap-0.5">
+      <li>
+        <a href="#projects" data-mobile-menu-link
+          data-nav-section="projects"
+          class="block rounded-lg px-4 py-2.5 text-center text-sm text-gray-600 transition-colors hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400">
+          {t.nav.work}
+        </a>
+      </li>
+
+      <li>
+        <a href="#about" data-mobile-menu-link
+          data-nav-section="about"
+          class="block rounded-lg px-4 py-2.5 text-center text-sm text-gray-600 transition-colors hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400">
+          {t.nav.about}
+        </a>
+      </li>
+
+      <li>
+        <a href="#experience" data-mobile-menu-link
+          data-nav-section="experience"
+          class="block rounded-lg px-4 py-2.5 text-center text-sm text-gray-600 transition-colors hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400">
+          {t.nav.experience}
+        </a>
+      </li>
+
+      <li>
+        <a href="#contact" data-mobile-menu-link 
+          data-nav-section="contact"
+          class="block rounded-lg px-4 py-2.5 text-center text-sm text-gray-600 transition-colors hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400">
+          {t.nav.contact}
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script src="../scripts/mobile-menu.ts"></script>
+<script src="../scripts/active-navigation.ts"></script>

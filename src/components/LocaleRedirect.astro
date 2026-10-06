@@ -1,0 +1,57 @@
+---
+import { storageKeys } from "../config/storage";
+---
+
+<script define:vars={{ storageKey: storageKeys.locale }} is:inline>
+  const locales = ["es", "en"];
+  const defaultLocale = "es";
+
+  function getBrowserLocale() {
+    const languages = navigator.languages?.length ? navigator.languages : [navigator.language];
+
+    for (const language of languages) {
+      const baseLanguage = language.toLowerCase().split("-")[0];
+
+      if (locales.includes(baseLanguage)) {
+        return baseLanguage;
+      }
+    }
+
+    return defaultLocale;
+  }
+
+  function getCurrentLocale() {
+    const path = window.location.pathname;
+
+    for (const locale of locales) {
+      if (locale === defaultLocale) {
+        continue;
+      }
+
+      if (path === `/${locale}` || path.startsWith(`/${locale}/`)) {
+        return locale;
+      }
+    }
+
+    return defaultLocale;
+  }
+
+  function getLocalePath(locale) {
+    return locale === defaultLocale ? "/" : `/${locale}/`;
+  }
+
+  const currentLocale = getCurrentLocale();
+  const savedLocale = localStorage.getItem(storageKey);
+
+  if (savedLocale && locales.includes(savedLocale)) {
+    if (savedLocale !== currentLocale) {
+      window.location.replace(getLocalePath(savedLocale));
+    }
+  } else {
+    const browserLocale = getBrowserLocale();
+
+    if (browserLocale !== currentLocale && browserLocale !== defaultLocale) {
+      window.location.replace(getLocalePath(browserLocale));
+    }
+  }
+</script>

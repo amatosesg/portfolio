@@ -1,0 +1,112 @@
+---
+import esFlag from "../assets/flags/es.svg";
+import enFlag from "../assets/flags/en.svg";
+import { locales, type Locale } from "../i18n";
+import { storageKeys } from "../config/storage";
+
+import { ChevronDown } from "@lucide/astro";
+
+const currentLocale = (Astro.currentLocale ?? "es") as Locale;
+
+const localeFlags: Record<Locale, ImageMetadata> = {
+  es: esFlag,
+  en: enFlag,
+};
+---
+
+<div class="language-switcher relative inline-block" data-storage-key={storageKeys.locale}>
+  <button
+    type="button"
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    class="flex items-center gap-2 rounded-full px-3 py-2 text-sm text-gray-800 transition-colors hover:bg-gray-300 dark:text-gray-100 dark:hover:bg-slate-900">
+    <img
+      src={localeFlags[currentLocale].src}
+      alt=""
+      aria-hidden="true"
+      class="h-4 w-6 rounded-sm object-cover" />
+    <span>{currentLocale.toUpperCase()}</span>
+    <ChevronDown size={14} stroke-width={1.8} aria-hidden="true" />
+  </button>
+
+  <ul role="listbox" hidden
+    class="absolute right-0 z-[60] mt-2 w-24 overflow-hidden rounded-lg border border-gray-200 bg-white p-1 text-gray-800 shadow-lg dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100">
+    {locales.map((locale) => (
+      <li>
+        <a
+          href={locale === "es" ? "/" : `/${locale}/`}
+          role="option"
+          aria-selected={locale === currentLocale}
+          data-locale={locale}
+          class="flex items-center gap-2 rounded-md px-2 py-2 text-sm transition-colors hover:bg-gray-200 dark:hover:bg-slate-700">
+          <img src={localeFlags[locale].src} alt="" aria-hidden="true" class="h-4 w-6 rounded-sm object-cover" />
+          <span>{locale.toUpperCase()}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<script>
+  const switchers = document.querySelectorAll<HTMLElement>(".language-switcher");
+
+  function openMenu(button: HTMLButtonElement, menu: HTMLUListElement) {
+    button.setAttribute("aria-expanded", "true");
+    menu.hidden = false;
+  }
+
+  function closeMenu(button: HTMLButtonElement, menu: HTMLUListElement) {
+    button.setAttribute("aria-expanded", "false");
+    menu.hidden = true;
+  }
+
+  switchers.forEach((switcher) => {
+    const button = switcher.querySelector<HTMLButtonElement>("button");
+    const menu = switcher.querySelector<HTMLUListElement>("ul");
+    const options = switcher.querySelectorAll<HTMLAnchorElement>("[data-locale]");
+    const storageKey = switcher.dataset.storageKey;
+
+    if (!button || !menu || !storageKey) {
+      return;
+    }
+
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+
+      document.dispatchEvent(new CustomEvent("close-mobile-menu"));
+
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+
+      if (isOpen) {
+        closeMenu(button, menu);
+      } else {
+        openMenu(button, menu);
+      }
+    });
+
+    options.forEach((option) => {
+      option.addEventListener("click", () => {
+        const locale = option.dataset.locale;
+
+        if (locale) {
+          localStorage.setItem(storageKey, locale);
+        }
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+
+      if (target instanceof Node && !switcher.contains(target)) {
+        closeMenu(button, menu);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeMenu(button, menu);
+        button.focus();
+      }
+    });
+  });
+</script>
