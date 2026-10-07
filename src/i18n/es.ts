@@ -84,6 +84,18 @@ const es = {
     github: "GitHub",
     live: "Ver proyecto",
   },
+
+  about: {
+    title: "Me gusta crear cosas.",
+    paragraphs: {
+      introduction:
+        "Soy desarrollador de software y disfruto convirtiendo ideas y problemas en soluciones útiles. Me gusta entender cómo funcionan las cosas y encontrar la forma más adecuada de construirlas.",
+      development:
+        "Actualmente trabajo principalmente con PHP y tecnologías web, aunque no me gusta limitarme a un lenguaje o una tecnología concreta. Lo que más me interesa es programar, aprender y crear software que tenga un propósito.",
+      personal:
+        "Fuera de la programación, me gusta mucho leer, jugar a videojuegos y ver series y anime. También disfruto haciendo deporte con amigos y pasando tiempo con mi familia y mis gatos.",
+    },
+  },
 };
 
 export default es;

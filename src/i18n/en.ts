@@ -84,6 +84,18 @@ const en = {
     github: "GitHub",
     live: "View project",
   },
+
+  about: {
+    title: "I enjoy building things.",
+    paragraphs: {
+      introduction:
+        "I'm a software developer who enjoys turning ideas and problems into useful solutions. I like understanding how things work and finding the right way to build them.",
+      development:
+        "I currently work mostly with PHP and web technologies, although I don't like limiting myself to a particular language or technology. What I enjoy most is programming, learning and creating software that has a purpose.",
+      personal:
+        "Outside of programming, I enjoy reading, playing video games and watching series and anime. I also like playing sports with friends and spending time with my family and my cats.",
+    },
+  },
 };
 
 export default en;

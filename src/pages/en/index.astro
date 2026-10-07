@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
 import Projects from "../../components/Projects.astro";
+import About from "../../components/About.astro";
 import { translations } from "../../i18n";
 
 const lang = "en";
@@ -13,9 +14,7 @@ const t = translations[lang];
 
   <Projects locale={lang} />
 
-  <section id="about" class="min-h-screen">
-    <h2>{t.sections.about}</h2>
-  </section>
+  <About locale={lang} />
 
   <section id="experience" class="min-h-screen">
     <h2>{t.sections.experience}</h2>
