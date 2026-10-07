@@ -34,7 +34,7 @@ const es = {
 
   sections: {
     experience: "Experiencia",
-    projects: "Proyectos seleccionados",
+    projects: "Proyectos",
     about: "Sobre mí",
     technologies: "Tecnologías",
     contact: "Hablemos",
@@ -95,6 +95,32 @@ const es = {
       personal:
         "Fuera de la programación, me gusta mucho leer, jugar a videojuegos y ver series y anime. También disfruto haciendo deporte con amigos y pasando tiempo con mi familia y mis gatos.",
     },
+  },
+
+  experience: {
+    items: [
+      {
+        role: "Full-Stack Developer & Data Analyst",
+        company: "Izertis S.A.",
+        period: "Agosto 2023 – Actualidad",
+        description:
+          "Desarrollo y mantenimiento de aplicaciones web con PHP y Laravel, junto con la migración de aplicaciones a .NET e integraciones con Microsoft Azure. También trabajo con APIs de organismos públicos, bases de datos MySQL, Power BI y control de versiones con Git y Azure DevOps.",
+      },
+      {
+        role: "Full-Stack Developer",
+        company: "Vicky Foods S.L.",
+        period: "Junio 2022 – Agosto 2023",
+        description:
+          "Desarrollo de un ERP utilizando PHP en backend y Sencha Ext JS en frontend, además de aplicaciones móviles con Ionic y Angular. Trabajo con bases de datos PostgreSQL, MySQL y MongoDB, Data Warehouse para Power BI e integraciones con Microsoft Dynamics 365 Business Central.",
+      },
+      {
+        role: "Asesor de ventas – Electricidad, Fontanería y Climatización",
+        company: "Leroy Merlin Gandia y Granada",
+        period: "Julio 2017 – Agosto 2022",
+        description:
+          "Experiencia en el área de electricidad, fontanería y climatización, siendo responsable de la campaña de calefacción y climatización y de la coordinación del equipo del área. Especialización en soluciones de energías renovables, incluyendo solar, térmica y aerotermia.",
+      },
+    ],
   },
 };
 

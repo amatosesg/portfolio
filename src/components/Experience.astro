@@ -1,0 +1,63 @@
+---
+import { translations } from "../i18n";
+import type { Locale } from "../i18n";
+
+import { BriefcaseBusiness } from "@lucide/astro";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = translations[locale];
+---
+
+<section id="experience" class="px-6 py-24">
+  <div class="mx-auto max-w-6xl">
+    <div class="flex items-center gap-3">
+      <BriefcaseBusiness size={32} stroke-width={1.8} aria-hidden="true"
+        class="text-gray-900 dark:text-white" />
+
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+        {t.sections.experience}
+      </h2>
+    </div>
+
+    <div class="mt-3 h-px w-24 bg-gray-300 dark:bg-slate-700"></div>
+
+    <div class="relative mt-12">
+      <div class="absolute bottom-0 left-[5.5px] top-0 w-px bg-gray-300 dark:bg-slate-700"></div>
+
+      <div class="space-y-12">
+        {t.experience.items.map((item, index) => (
+          <article class="relative grid gap-6 pl-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:pl-0">
+            <div class:list={[
+              "absolute left-0 top-2 h-3 w-3 rounded-full border-2 border-gray-300 bg-orange-500 dark:border-slate-700 dark:bg-blue-400",
+              index === 0 && "shadow-[0_0_14px_6px_rgba(249,115,22,0.45)] dark:shadow-[0_0_16px_6px_rgba(96,165,250,0.60)]",
+            ]}></div>
+
+            <div class="lg:pl-8">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+                {item.role}
+              </h3>
+
+              <p class="mt-1 text-lg font-semibold text-gray-700 dark:text-slate-200">
+                {item.company}
+              </p>
+
+              <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">
+                {item.period}
+              </p>
+            </div>
+
+            <div class="lg:pr-4">
+              <p class="leading-7 text-gray-600 dark:text-slate-300">
+                {item.description}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
