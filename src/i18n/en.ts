@@ -87,6 +87,8 @@ const en = {
 
   about: {
     title: "I enjoy building things.",
+    downloadCv: "Download CV",
+    cv: "/cv/cv-en.pdf",
     paragraphs: {
       introduction:
         "I'm a software developer who enjoys turning ideas and problems into useful solutions. I like understanding how things work and finding the right way to build them.",

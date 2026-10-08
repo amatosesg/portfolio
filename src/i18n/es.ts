@@ -87,6 +87,8 @@ const es = {
 
   about: {
     title: "Me gusta crear cosas.",
+    downloadCv: "Descargar CV",
+    cv: "/cv/cv-es.pdf",
     paragraphs: {
       introduction:
         "Soy desarrollador de software y disfruto convirtiendo ideas y problemas en soluciones útiles. Me gusta entender cómo funcionan las cosas y encontrar la forma más adecuada de construirlas.",

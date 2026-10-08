@@ -4,7 +4,10 @@ import { Image } from "astro:assets";
 import { translations } from "../i18n";
 import type { Locale } from "../i18n";
 
-import { UserRound } from "@lucide/astro";
+import { Download, UserRound } from "@lucide/astro";
+import { Github } from "simple-icons-astro";
+
+import linkedinIcon from "../assets/icons/linkedin.svg";
 import workspaceImage from "../assets/about/workspace.webp";
 
 interface Props {
@@ -40,6 +43,26 @@ const t = translations[locale];
           <p>{t.about.paragraphs.development}</p>
 
           <p>{t.about.paragraphs.personal}</p>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://github.com/amatosesg" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-full border border-gray-300 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-700">
+            <Github size={18} aria-hidden="true" />
+            GitHub
+          </a>
+
+          <a href="https://www.linkedin.com/in/amatoses" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-full border border-gray-300 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-700">
+            <img src={linkedinIcon.src} alt="" class="h-[18px] w-[18px]" />
+            LinkedIn
+          </a>
+
+          <a href={t.about.cv} download
+            class="inline-flex items-center gap-2 rounded-full bg-gray-900 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-gray-700 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200">
+            <Download size={18} stroke-width={1.8} aria-hidden="true" />
+            {t.about.downloadCv}
+          </a>
         </div>
       </div>
 
