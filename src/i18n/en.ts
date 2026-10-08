@@ -37,7 +37,7 @@ const en = {
     projects: "Projects",
     about: "About me",
     technologies: "Technologies",
-    contact: "Let's talk",
+    contact: "Contact",
   },
 
   projects: {
@@ -123,6 +123,14 @@ const en = {
           "Worked in electrical, plumbing and HVAC sales, taking responsibility for the heating and climate control campaign and coordinating the department team. Specialized in renewable energy solutions, including solar, thermal energy and aerothermal systems.",
       },
     ],
+  },
+
+  contact: {
+    title: "Let's talk",
+    description:
+      "If you have a project, a professional opportunity, or simply want to get in touch, I'd be happy to hear from you.",
+    button: "Send me an email",
+    email: "adriamg.matoses@gmail.com",
   },
 };
 

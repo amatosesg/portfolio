@@ -37,7 +37,7 @@ const es = {
     projects: "Proyectos",
     about: "Sobre mí",
     technologies: "Tecnologías",
-    contact: "Hablemos",
+    contact: "Contacto",
   },
 
   projects: {
@@ -123,6 +123,14 @@ const es = {
           "Experiencia en el área de electricidad, fontanería y climatización, siendo responsable de la campaña de calefacción y climatización y de la coordinación del equipo del área. Especialización en soluciones de energías renovables, incluyendo solar, térmica y aerotermia.",
       },
     ],
+  },
+
+  contact: {
+    title: "¿Hablamos?",
+    description:
+      "Si tienes un proyecto, una oportunidad profesional o simplemente quieres ponerte en contacto conmigo, estaré encantado de escucharte.",
+    button: "Enviar email",
+    email: "adriamg.matoses@gmail.com",
   },
 };
 
