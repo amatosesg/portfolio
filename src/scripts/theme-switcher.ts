@@ -1,6 +1,10 @@
 const themeSwitchers = document.querySelectorAll<HTMLButtonElement>(".theme-switcher");
 
-function updateThemeIcons(themeSwitcher: HTMLButtonElement, theme: "dark" | "light") {
+function updateThemeIcons(
+  themeSwitcher: HTMLButtonElement,
+  theme: "dark" | "light",
+  animate = false,
+) {
   const darkIcon = themeSwitcher.querySelector<SVGElement>(".theme-icon-dark");
   const lightIcon = themeSwitcher.querySelector<SVGElement>(".theme-icon-light");
 
@@ -11,8 +15,52 @@ function updateThemeIcons(themeSwitcher: HTMLButtonElement, theme: "dark" | "lig
     return;
   }
 
-  darkIcon.classList.toggle("hidden", theme !== "dark");
-  lightIcon.classList.toggle("hidden", theme !== "light");
+  const activeIcon = theme === "dark" ? darkIcon : lightIcon;
+  const inactiveIcon = theme === "dark" ? lightIcon : darkIcon;
+
+  if (animate) {
+    inactiveIcon.animate(
+      [
+        {
+          opacity: 1,
+          transform: "rotate(0deg) scale(1)",
+        },
+        {
+          opacity: 0,
+          transform: "rotate(45deg) scale(0.7)",
+        },
+      ],
+      {
+        duration: 180,
+        easing: "ease-in",
+        fill: "forwards",
+      },
+    );
+
+    activeIcon.animate(
+      [
+        {
+          opacity: 0,
+          transform: "rotate(-45deg) scale(0.7)",
+        },
+        {
+          opacity: 1,
+          transform: "rotate(0deg) scale(1)",
+        },
+      ],
+      {
+        duration: 220,
+        easing: "ease-out",
+        fill: "forwards",
+      },
+    );
+  } else {
+    activeIcon.style.opacity = "1";
+    activeIcon.style.transform = "rotate(0deg) scale(1)";
+
+    inactiveIcon.style.opacity = "0";
+    inactiveIcon.style.transform = "rotate(0deg) scale(0.7)";
+  }
 
   themeSwitcher.setAttribute(
     "aria-label",
@@ -42,7 +90,7 @@ themeSwitchers.forEach((themeSwitcher) => {
     localStorage.setItem(storageKey, newTheme);
 
     themeSwitchers.forEach((switcher) => {
-      updateThemeIcons(switcher, newTheme);
+      updateThemeIcons(switcher, newTheme, true);
     });
   });
 });
