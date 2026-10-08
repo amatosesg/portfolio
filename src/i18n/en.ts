@@ -95,7 +95,7 @@ const en = {
       development:
         "I currently work mostly with PHP and web technologies, although I don't like limiting myself to a particular language or technology. What I enjoy most is programming, learning and creating software that has a purpose.",
       personal:
-        "Outside of programming, I enjoy reading, playing video games and watching series and anime. I also like playing sports with friends and spending time with my family and my cats.",
+        "Outside of programming, I enjoy reading, playing video games and watching series. I also like playing sports with friends and spending time with my family and my cats.",
     },
   },
 

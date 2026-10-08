@@ -95,7 +95,7 @@ const es = {
       development:
         "Actualmente trabajo principalmente con PHP y tecnologías web, aunque no me gusta limitarme a un lenguaje o una tecnología concreta. Lo que más me interesa es programar, aprender y crear software que tenga un propósito.",
       personal:
-        "Fuera de la programación, me gusta mucho leer, jugar a videojuegos y ver series y anime. También disfruto haciendo deporte con amigos y pasando tiempo con mi familia y mis gatos.",
+        "Fuera de la programación, me gusta mucho leer, jugar a videojuegos y ver series. También disfruto haciendo deporte con amigos y pasando tiempo con mi familia y mis gatos.",
     },
   },
 
