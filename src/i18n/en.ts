@@ -28,7 +28,7 @@ const en = {
     available: "Available for opportunities",
     title: "Software Developer",
     description:
-      "I build practical software solutions for real-world problems, across platforms and technologies.",
+      "Hi, I'm Adrià, a software developer. I enjoy understanding problems, finding the right solution, and building useful tools to solve them.",
     projects: "View projects",
   },
 

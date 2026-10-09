@@ -28,7 +28,7 @@ const es = {
     available: "Disponible para oportunidades",
     title: "Software Developer",
     description:
-      "Desarrollo soluciones de software prácticas para problemas reales, utilizando distintas plataformas y tecnologías.",
+      "Hola, soy Adrià, desarrollador de software. Me gusta entender los problemas, buscar la solución adecuada y crear herramientas útiles para resolverlos.",
     projects: "Ver proyectos",
   },
 
