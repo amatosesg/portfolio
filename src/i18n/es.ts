@@ -85,19 +85,22 @@ const es = {
     live: "Ver proyecto",
   },
 
+  
   about: {
-    title: "Me gusta crear cosas.",
     downloadCv: "Descargar CV",
     cv: "/cv/cv-es.pdf",
     paragraphs: {
       introduction:
-        "Soy desarrollador de software y disfruto convirtiendo ideas y problemas en soluciones útiles. Me gusta entender cómo funcionan las cosas y encontrar la forma más adecuada de construirlas.",
+        "Me gusta desarrollar aplicaciones que tengan una utilidad real: herramientas que simplifiquen tareas, mejoren procesos y hagan más fácil el día a día de las personas. Lo que más me motiva es saber que mi trabajo tiene un impacto positivo en quienes utilizan el software que desarrollo.",
       development:
-        "Actualmente trabajo principalmente con PHP y tecnologías web, aunque no me gusta limitarme a un lenguaje o una tecnología concreta. Lo que más me interesa es programar, aprender y crear software que tenga un propósito.",
+        "Me considero una persona curiosa, a la que le gusta entender cómo funcionan las cosas, aprender continuamente y buscar maneras de hacerlas mejor. Disfruto afrontando nuevos retos, explorando distintas formas de resolverlos y ampliando mis conocimientos para seguir creciendo tanto a nivel personal como profesional.",
       personal:
-        "Fuera de la programación, me gusta mucho leer, jugar a videojuegos y ver series. También disfruto haciendo deporte con amigos y pasando tiempo con mi familia y mis gatos.",
+        "Fuera del ámbito laboral, me gusta llevar una vida tranquila y hacer las cosas a mi manera, con calma y responsabilidad. Intento ser una persona cercana y tratar a los demás como me gustaría que me trataran a mí.",
+      hobbies:
+        "En mi tiempo libre, disfruto leyendo, jugando a videojuegos y viendo series. También me gusta practicar deporte, tanto para mantenerme activo como para compartir buenos momentos con mis amigos. Y, por supuesto, me encanta pasar tiempo con mi familia y mis gatos.",
     },
   },
+
 
   experience: {
     items: [

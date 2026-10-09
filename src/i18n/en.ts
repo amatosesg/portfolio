@@ -86,16 +86,17 @@ const en = {
   },
 
   about: {
-    title: "I enjoy building things.",
     downloadCv: "Download CV",
     cv: "/cv/cv-en.pdf",
     paragraphs: {
       introduction:
-        "I'm a software developer who enjoys turning ideas and problems into useful solutions. I like understanding how things work and finding the right way to build them.",
+        "I enjoy developing applications that serve a real purpose: tools that simplify tasks, improve processes and make people's everyday lives easier. What motivates me most is knowing that my work has a positive impact on the people who use the software I develop.",
       development:
-        "I currently work mostly with PHP and web technologies, although I don't like limiting myself to a particular language or technology. What I enjoy most is programming, learning and creating software that has a purpose.",
+        "I consider myself a curious person who enjoys understanding how things work, learning continuously and finding ways to improve them. I enjoy taking on new challenges, exploring different ways to solve them and expanding my knowledge to keep growing both personally and professionally.",
       personal:
-        "Outside of programming, I enjoy reading, playing video games and watching series. I also like playing sports with friends and spending time with my family and my cats.",
+        "Outside of work, I like to lead a quiet life and do things my own way, with a calm and responsible approach. I try to be approachable and treat others the way I would like to be treated.",
+      hobbies:
+        "In my free time, I enjoy reading, playing video games and watching TV series. I also like playing sports, both to stay active and to share good moments with friends. And of course, I love spending time with my family and my cats.",
     },
   },
 
