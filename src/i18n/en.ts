@@ -43,40 +43,32 @@ const en = {
   projects: {
     labels: {
       preview: "Preview",
-      overview: "Overview",
+      overview: "Description",
       technologies: "Technologies",
     },
 
-    "taskflow-api": {
-      title: "TaskFlow API",
+    "fredllum-web": {
+      title: "Fredllum Corporate Website",
       description:
-        "A REST API for managing users, projects and tasks.",
-      overview:
-        "A REST API designed to manage users, projects and tasks from different applications and services.",
+        "A corporate website to showcase Fredllum's services and make it easier for customers to get in touch.",
     },
 
-    "business-manager": {
-      title: "Business Manager",
+    "fredllum-erp": {
+      title: "Fredllum Management System",
       description:
-        "A lightweight management system for small businesses.",
-      overview:
-        "A management application designed to centralize customers, products, quotes, invoices and other common business operations.",
+        "An internal application to centralize processes and simplify day-to-day operations, with modules for quotes, employee schedules, leave, service requests and pending tasks.",
     },
 
     "personal-portfolio": {
       title: "Personal Portfolio",
       description:
-        "A multilingual portfolio built from scratch with a focus on performance and accessibility.",
-      overview:
-        "This portfolio itself, built from scratch as a project to explore a modern, responsive and accessible architecture prepared for multiple languages.",
+        "A multilingual portfolio built from scratch with Astro, TypeScript and Tailwind CSS, focusing on performance, accessibility and maintainability.",
     },
 
-    "system-monitor": {
-      title: "System Monitor",
+    "satflow-api": {
+      title: "SATFlow — Incident Management API",
       description:
-        "A dashboard for monitoring systems and visualizing real-time data.",
-      overview:
-        "A dashboard focused on system monitoring and visualizing information coming from different services and APIs.",
+        "A REST API built with ASP.NET Core to manage technical service incidents, from registration and assignment to tracking and resolution, with status management and an activity history.",
     },
   },
 

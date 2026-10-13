@@ -9,10 +9,10 @@ const projectImages = import.meta.glob(
 ) as Record<string, ImageMetadata>;
 
 export type ProjectId =
-  | "taskflow-api"
-  | "business-manager"
+  | "fredllum-web"
+  | "fredllum-erp"
   | "personal-portfolio"
-  | "system-monitor";
+  | "satflow-api";
 
 export interface Project {
   id: ProjectId;
@@ -45,12 +45,12 @@ function getProjectImages(projectId: ProjectId): ImageMetadata[] {
 
 const projectData: ProjectData[] = [
   {
-    id: "taskflow-api",
-    technologies: ["PHP", "Laravel", "MySQL"],
+    id: "fredllum-web",
+    technologies: ["Astro", "TypeScript", "Tailwind CSS"],
   },
   {
-    id: "business-manager",
-    technologies: ["PHP", "MySQL", "JavaScript"],
+    id: "fredllum-erp",
+    technologies: ["PHP", "Laravel", "Livewire", "Alpine.js", "Tailwind CSS", "MySQL"],
   },
   {
     id: "personal-portfolio",
@@ -59,8 +59,8 @@ const projectData: ProjectData[] = [
     live: "/",
   },
   {
-    id: "system-monitor",
-    technologies: ["TypeScript", "API", "WebSockets"],
+    id: "satflow-api",
+    technologies: ["C#", "ASP.NET Core", "Entity Framework Core", "SQL Server"],
   },
 ];
 

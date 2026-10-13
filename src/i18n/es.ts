@@ -47,36 +47,28 @@ const es = {
       technologies: "Tecnologías",
     },
 
-    "taskflow-api": {
-      title: "TaskFlow API",
+    "fredllum-web": {
+      title: "Web corporativa de Fredllum",
       description:
-        "Una API REST para gestionar usuarios, proyectos y tareas.",
-      overview:
-        "Una API REST pensada para gestionar usuarios, proyectos y tareas desde diferentes aplicaciones y servicios.",
+        "Una web corporativa para presentar los servicios de Fredllum y facilitar el contacto con sus clientes.",
     },
 
-    "business-manager": {
-      title: "Business Manager",
+    "fredllum-erp": {
+      title: "Sistema de gestión de Fredllum",
       description:
-        "Un pequeño sistema de gestión para empresas.",
-      overview:
-        "Una aplicación de gestión diseñada para centralizar clientes, productos, presupuestos, facturas y otras tareas habituales de una empresa.",
+        "Una aplicación interna para centralizar procesos y simplificar la gestión diaria de la empresa, con módulos para presupuestos, horarios, vacaciones, avisos del servicio técnico y tareas pendientes.",
     },
 
     "personal-portfolio": {
       title: "Portfolio personal",
       description:
-        "Un portfolio multidioma desarrollado desde cero con un enfoque en rendimiento y accesibilidad.",
-      overview:
-        "Este mismo portfolio, desarrollado desde cero como un proyecto para explorar una arquitectura moderna, responsive, accesible y preparada para múltiples idiomas.",
+        "Un portfolio multidioma desarrollado desde cero con Astro, TypeScript y Tailwind CSS, con un enfoque en rendimiento, accesibilidad y mantenibilidad.",
     },
 
-    "system-monitor": {
-      title: "System Monitor",
+    "satflow-api": {
+      title: "SATFlow — API de gestión de incidencias",
       description:
-        "Un dashboard para monitorizar sistemas y visualizar datos en tiempo real.",
-      overview:
-        "Un dashboard orientado a la monitorización de sistemas y la visualización de información procedente de diferentes servicios y APIs.",
+        "Una API REST desarrollada con ASP.NET Core para gestionar incidencias de servicio técnico, desde su registro y asignación hasta su seguimiento y resolución, con control de estados e historial de actuaciones.",
     },
   },
 
@@ -84,7 +76,6 @@ const es = {
     github: "GitHub",
     live: "Ver proyecto",
   },
-
   
   about: {
     downloadCv: "Descargar CV",
