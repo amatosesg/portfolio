@@ -12,7 +12,7 @@ if (navigationLinks.length && sections.length) {
         sectionId !== null && link.dataset.navSection === sectionId;
 
       link.classList.toggle("font-semibold", isActive);
-      link.classList.toggle("text-blue-600", isActive);
+      link.classList.toggle("text-orange-500", isActive);
       link.classList.toggle("dark:text-blue-400", isActive);
 
       link.classList.toggle("text-gray-600", !isActive);
