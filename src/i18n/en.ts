@@ -43,7 +43,7 @@ const en = {
   projects: {
     labels: {
       preview: "Preview",
-      overview: "Description",
+      description: "Description",
       technologies: "Technologies",
     },
 

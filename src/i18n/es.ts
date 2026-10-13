@@ -43,7 +43,7 @@ const es = {
   projects: {
     labels: {
       preview: "Vista previa",
-      overview: "Descripción",
+      description: "Descripción",
       technologies: "Tecnologías",
     },
 
