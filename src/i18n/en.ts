@@ -107,21 +107,21 @@ const en = {
         company: "Izertis S.A.",
         period: "August 2023 – Present",
         description:
-          "Develop and maintain web applications using PHP and Laravel, while working on application migrations to .NET and integrations with Microsoft Azure. I also work with public APIs, MySQL databases, Power BI and version control through Git and Azure DevOps.",
+          "Develop and maintain web applications using PHP and Laravel. Migrate applications to .NET and integrate solutions with Microsoft Azure. I also work with public-sector APIs, MySQL databases, Power BI, and version control tools such as Git and Azure DevOps.",
       },
       {
         role: "Full-Stack Developer",
         company: "Vicky Foods S.L.",
         period: "June 2022 – August 2023",
         description:
-          "Developed an ERP using PHP on the backend and Sencha Ext JS on the frontend, as well as mobile applications with Ionic and Angular. Worked with PostgreSQL, MySQL and MongoDB databases, Data Warehouse solutions for Power BI and integrations with Microsoft Dynamics 365 Business Central.",
+          "Developed an ERP using PHP on the backend and Sencha Ext JS on the frontend, as well as mobile applications with Ionic and Angular. Worked with PostgreSQL, MySQL, and MongoDB databases, Data Warehouse solutions for Power BI, and integrations with Microsoft Dynamics 365 Business Central.",
       },
       {
         role: "Sales Advisor – Electrical, Plumbing & HVAC",
         company: "Leroy Merlin Gandia and Granada",
         period: "July 2017 – August 2022",
         description:
-          "Worked in electrical, plumbing and HVAC sales, taking responsibility for the heating and climate control campaign and coordinating the department team. Specialized in renewable energy solutions, including solar, thermal energy and aerothermal systems.",
+          "Worked in electrical, plumbing, and HVAC sales, with responsibility for the heating and climate control campaign and coordination of the department team. Specialized in renewable energy solutions, including solar energy, solar thermal systems, and aerothermal systems.",
       },
     ],
   },

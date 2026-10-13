@@ -100,8 +100,7 @@ const es = {
         "En mi tiempo libre, disfruto leyendo, jugando a videojuegos y viendo series. También me gusta practicar deporte, tanto para mantenerme activo como para compartir buenos momentos con mis amigos. Y, por supuesto, me encanta pasar tiempo con mi familia y mis gatos.",
     },
   },
-
-
+  
   experience: {
     items: [
       {
@@ -109,21 +108,21 @@ const es = {
         company: "Izertis S.A.",
         period: "Agosto 2023 – Actualidad",
         description:
-          "Desarrollo y mantenimiento de aplicaciones web con PHP y Laravel, junto con la migración de aplicaciones a .NET e integraciones con Microsoft Azure. También trabajo con APIs de organismos públicos, bases de datos MySQL, Power BI y control de versiones con Git y Azure DevOps.",
+          "Desarrollo y mantenimiento de aplicaciones web con PHP y Laravel, migración de aplicaciones a .NET e integración de soluciones con Microsoft Azure. También trabajo con APIs de organismos públicos, bases de datos MySQL, Power BI y herramientas de control de versiones como Git y Azure DevOps.",
       },
       {
         role: "Full-Stack Developer",
         company: "Vicky Foods S.L.",
         period: "Junio 2022 – Agosto 2023",
         description:
-          "Desarrollo de un ERP utilizando PHP en backend y Sencha Ext JS en frontend, además de aplicaciones móviles con Ionic y Angular. Trabajo con bases de datos PostgreSQL, MySQL y MongoDB, Data Warehouse para Power BI e integraciones con Microsoft Dynamics 365 Business Central.",
+          "Desarrollo de un ERP con PHP en el backend y Sencha Ext JS en el frontend, así como de aplicaciones móviles con Ionic y Angular. Experiencia con bases de datos PostgreSQL, MySQL y MongoDB, soluciones de Data Warehouse para Power BI e integraciones con Microsoft Dynamics 365 Business Central.",
       },
       {
         role: "Asesor de ventas – Electricidad, Fontanería y Climatización",
         company: "Leroy Merlin Gandia y Granada",
         period: "Julio 2017 – Agosto 2022",
         description:
-          "Experiencia en el área de electricidad, fontanería y climatización, siendo responsable de la campaña de calefacción y climatización y de la coordinación del equipo del área. Especialización en soluciones de energías renovables, incluyendo solar, térmica y aerotermia.",
+          "Experiencia en ventas de electricidad, fontanería y climatización, con responsabilidad sobre la campaña de calefacción y climatización y la coordinación del equipo del área. Especialización en soluciones de energías renovables, como energía solar, térmica y aerotermia.",
       },
     ],
   },
