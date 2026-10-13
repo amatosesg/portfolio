@@ -88,6 +88,7 @@ const en = {
   about: {
     downloadCv: "Download CV",
     cv: "/cv/cv-en.pdf",
+    cvFilename: "Adria-Matoses-CV-EN.pdf",
     paragraphs: {
       introduction:
         "I enjoy developing applications that serve a real purpose: tools that simplify tasks, improve processes and make people's everyday lives easier. What motivates me most is knowing that my work has a positive impact on the people who use the software I develop.",

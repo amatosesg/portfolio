@@ -89,6 +89,7 @@ const es = {
   about: {
     downloadCv: "Descargar CV",
     cv: "/cv/cv-es.pdf",
+    cvFilename: "Adria-Matoses-CV-ES.pdf",
     paragraphs: {
       introduction:
         "Me gusta desarrollar aplicaciones que tengan una utilidad real: herramientas que simplifiquen tareas, mejoren procesos y hagan más fácil el día a día de las personas. Lo que más me motiva es saber que mi trabajo tiene un impacto positivo en quienes utilizan el software que desarrollo.",
